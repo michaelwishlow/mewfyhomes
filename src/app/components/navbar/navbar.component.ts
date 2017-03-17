@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {AngularFire} from 'angularfire2';
+import {FlashMessagesService} from 'angular2-flash-messages';
 
 @Component({
   selector: 'app-navbar',
@@ -8,7 +9,10 @@ import {AngularFire} from 'angularfire2';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor(public af:AngularFire) { }
+  constructor(
+    public af:AngularFire,
+    public flashMessage:FlashMessagesService
+    ) { }
 
   ngOnInit() {
   }
@@ -17,6 +21,8 @@ export class NavbarComponent implements OnInit {
   }
   logout (){
   		this.af.auth.logout();
+             this.flashMessage.show('You Are Logged Out', 
+             {cssClass: 'alert-success', timeout: 3000 });
   }
   
 }

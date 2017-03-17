@@ -18,4 +18,4 @@ export class ListingsComponent implements OnInit {
     });
   }
 
-}
+} 
