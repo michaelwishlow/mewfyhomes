@@ -28,7 +28,7 @@ export class AddListingComponent implements OnInit {
   		//  for initial testing   console.log(this.title);
   		let listing = {
   			title: this.title,
-  			city: this.title,
+  			city: this.city,
   			owner: this.owner,
   			bedrooms: this.bedrooms,
   			price: this.price,

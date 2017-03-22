@@ -6,7 +6,7 @@ import * as firebase from 'firebase';
 @Injectable()
 export class FirebaseService {
   listings: FirebaseListObservable<any[]>;
-  listing: FirebaseObjectObservable<any[]>;
+  listing: FirebaseObjectObservable<any>;
   folder: any;
 
   constructor(private af: AngularFire) {
@@ -48,4 +48,5 @@ interface Listing{
   city?:string;
   owner?:string;
   bedrooms?:string;
+  //path?: string;
 }
