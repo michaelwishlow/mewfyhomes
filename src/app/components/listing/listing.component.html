@@ -14,7 +14,7 @@
 	            <li class="list-group-item">Price: {{listing.price}}</li>
 	        </ul>
 	  </div>
-	      <a class="btn btn-default" href="#">Edit</a>
-	      <a class="btn btn-danger" href="#">Delete</a>
+	      <a class="btn btn-default" [routerLink]="['/edit-listing/'+listing.$key]">Edit</a>
+	      <a (click)="onDeleteClick()" class="btn btn-danger">Delete</a>
 	</div>
 </div>
